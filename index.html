@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Mistery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="paralax">
+       <p id=Nadiyya>Presented by: <br>Nadiyya Hasaniyyah</p> 
+      <img src="stars-1.png" id="stars">
+        <img src="awan.png" id="awan">
+        <img src="moon.png" id="moon">
+        <h1 id="text">Word Mistery<br>Tubes ASA</h1> 
+       <a href="halaman2.html" id="button" >Explore</a>
+    </div>
+  
+  
+    <div class="description">
+        <h2>Menerjemahkan Sandi Sisipan Menggunakan Algoritma <i>Brute Force, Recursive dan Boyer Moore</i></h2><br>
+      
+        <h3><i>Abstract</i></h3><p>—Sandi sisipan merupakan salah satu bentuk komunikasi yang digunakan di dalam bidang kepramukaan sebagai sarana komunikasi secara rahasia, maupun dalam keadaan darurat dan juga sebagai informasi rahasia. Makalah ini akan membahas penggunaan algoritma <i>Brute Force, Recursive dan Boyer Moore</i> dalam menerjemahkan Sandi Sisipan. Algoritma <i>Brute Force</i> adalah pendekatan sederhana yang mencoba semua kemungkinan kombinasi sandi secara berurutan. Algoritma <i>Recursive</i> menggunakan pendekatan pemecahan masalah dengan membagi sandi menjadi submasalah yang lebih kecil dan memecahkannya secara berulang. Algoritma <i>Boyer Moore</i> memanfaatkan pola-pola dalam sandi untuk mengurangi jumlah perbandingan yang harus dilakukan.
+</p><br>
+      <h3>Sandi Sisipan</h3>
+      <p>Sandi sisipan merupakan salah satu bentuk komunikasi yang digunakan di dalam bidang kepramukaan sebagai sarana komunikasi secara rahasia, maupun dalam keadaan darurat dan juga sebagai informasi rahasia. Sandi sisipan merupakan penulisan sandi yang diselipi huruf lain.Sandi sisipan merupakan penulisan sandi yang diselipi huruf lain. Yang biasanya digunakan adalah tiga huruf AND. Untuk membaca sandi ini, abaikan tiga huruf tersebut.<br> Teks: Anda kandu pander gandi dandu landu andan yanda<br>
+Arti dari pesan tersebut adalah “Akupergiduluya”, ketika diuraikan perkata dalam bahasa Indonesia maka dibaca “Aku pergi dulu ya”. 
+</p><br>
+      
+      <h3>Algoritma <i>Brute Force</i></h3>
+      <p> Algoritma <i>Brute Force</i> adalah pendekatan yang lempang <i>(straightforward)</i> untuk memecahkan suatu persoalan, biasanya didasarkan pada pernyataan masalah <i>(problem statement)</i> dan definisi konsep yang dilibatkan. Algoritma <i>Brute Force</i> memecahkan masalah dengan sangat sederhana, langsung dan dengan cara yang jelas. Agoritma <i>Brute Force</i> umumnya tidak “cerdas” dan tidak mangkus, karena ia membutuhkan jumlah komputasi yang besar dan waktu yang lama dalam penyelesaiannya. Kata <i>“force”</i> mengindikasikan “tenaga” ketimbang “otak”.Algoritma <i>Brute Force</i>  lebih cocok untuk persoalan yang berukuran kecil.
+</p><br>
+      
+      <h3>Algoritma <i>Recursive</i></h3>
+      <p>Sebuah objek dikatakan rekursif <i>(recursive)</i> jika ia didefinisikan dalam terminologi dirinya sendiri. Proses mendefinisikan objek dalam terminologi dirinya sendiri disebut rekursi <i>(recursion)</i>
+        Fungsi rekursif didefinisikan oleh dua bagian:
+        <b>Basis</b>,
+Bagian yang berisi nilai fungsi yang terdefinisi secara eksplisit. Bagian ini juga sekaligus menghentikan rekursif (dan memberikan sebuah nilai yang terdefinisi pada fungsi rekursif).
+<b>Rekurens</b>,
+Bagian ini mendefinisikan fungsi dalam terminologi dirinya sendiri. Berisi kaidah untuk menemukan nilai fungsi pada suatu input dari nilai-nilai lainnya pada input yang lebih kecil</p><br>
+      
+      <h3>Algoritma <i>Boyer Moore</i></h3>
+      <p>
+        Algoritma <i>Boyer Moore</i> adalah salah satu algoritma untuk mencari suatu string di dalam teks, dibuat oleh R.M Boyer dan J.S Moore. Ide utama algoritma ini adalah mencari string dengan melakukan pembandingan karakter mulai dari karakter paling kanan dari string yang dicari. Dengan mengunakan algoritma ini, secara rata-rata proses pencarian akan menjadi lebih cepat jika dibandingakan dengan algoritma lainnya. alasan melakukan pencocokan dari kanan (posisi terakhir string yang dicari)
+      </p>
+      
+      
+        
+
+    </div>
+    <script>
+let stars = document.getElementById('stars');
+let awan = document.getElementById('awan');
+let moon = document.getElementById('moon');
+let text = document.getElementById('text');
+let button = document.getElementById('button');
+let description= document.getElementById("description");
+      
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 0.8 + 'px';
+    text.style.marginBottom = value * 1 + 'px';
+    button.style.marginBottom = value * 1 + 'px';
+});
+
+
+  
+  </script>
+</body>
+</html
