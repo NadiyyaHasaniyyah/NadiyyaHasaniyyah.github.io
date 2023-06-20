@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BoyerMoore</title>
+  <style>
+    .glass {
+      border: 1px solid white;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 0 8px 8px 8px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+      
+    .glass p {
+      margin: 0;
+      }   
+      
+    .blue {
+      color: #284062;
+      }
+      
+      
+    .buttonStep {
+      font-family:Montserrat;
+      background-color:white;
+      border-radius: 8px 8px 8px 8px;
+      color:#22294d ;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .buttonStep:hover {
+      background-color: #5678;
+    }
+    
+    body {
+      background: #22294d;
+      font-size: 16px;
+      font-family: Montserrat;
+      margin: 0; 
+      padding: 20px;
+      color: white;
+    }
+      
+    h1 {
+      font-size: 4.8em;
+      font-family: Montserrat;
+      text-align: center;
+      color: white;
+      text-shadow: 3px 3px 10px #FFFFFF;
+    }
+      
+    a {
+      text-shadow: 3px 3px 10px #FFFFFF;
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .tab-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      font-family: Montserrat;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 8px 8px 0 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .tab.active {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .tab-content {
+      display: none;
+      border: 1px solid white;
+      padding: 20px;
+      border-radius: 0 8px 8px 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+    </style>
+</head>
+<body>
+  <h1>Boyer Moore</h1> 
+  <div class="tab-container">
+    <div class="tab active" onclick="changeTab('simulasi')">Simulasi</div>
+    <div class="tab" onclick="changeTab('materi')">Materi</div>
+    <div class="tab" onclick="changeTab('bigo')">Big O</div>
+  </div>
+  <div class="tab-content active" id="simulasi">
+    <div id="output"></div>
+
+    <button onclick="previousStep()" class='buttonStep' >Previous</button>
+    <button onclick="nextStep()" class='buttonStep'  >Next</button>
+   
+  </div>
+  <div class="tab-content" id="materi">
+    <h2>Materi</h2>
+    <p>Algoritma <i>Boyer Moore</i> adalah salah satu algoritma untuk mencari suatu string di dalam teks, dibuat oleh R.M Boyer dan J.S Moore. Ide utama algoritma ini adalah mencari string dengan melakukan pembandingan karakter mulai dari karakter paling kanan dari string yang dicari. Dengan mengunakan algoritma ini, secara rata-rata proses pencarian akan menjadi lebih cepat jika dibandingakan dengan algoritma lainnya. alasan melakukan pencocokan dari kanan (posisi terakhir string yang dicari). Algoritma Boyer Moore melakukan pencocokan string menggunakan dua teknik yaitu <i>Looking glass</i> dan <i>Character Jump</i></p>
+    <p> Teknik looking glass merupakan metode untuk melakukan proses pencocokan string dimulai dari akhir dan bergerak ke depan. Jika karakter T[i] tidak sama dengan karakter P[j], maka pattern digeser dengan menggunakan teknik character-jump. <br> Character Jump merupakan teknik pergeseran pattern, yang akan digunakan pada saat terjadi ketidakcocokan <i>(mismatch)</i> antara karakter yang sedang dicocokkan pada pattern dan teks.</p>
+  </div>
+  <div class="tab-content" id="bigo">
+    <h2>Big O</h2>
+    <p>Big O dari Boyer Moore adalah  O(n + σ) dengan σ yaitu akbar ruang alfabet.</p>
+  </div>
+  
+  <script src="BoyerMoore.js"></script>
+
+  <br><br><a href="halaman2.html">Back</a>
+</body>
+</html>
