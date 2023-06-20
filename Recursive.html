@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recursive</title>
+  <style>
+.glass {
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 0 8px 8px 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+    
+.glass p {
+  margin: 0;
+}
+
+.removed-word {
+  color: yellow;
+}
+    
+body {
+  background: #22294d;
+  font-size: 16px;
+  font-family:Montserrat;
+  margin: 0;
+  padding: 20px;
+  color: white;
+    
+}
+
+.buttonStep {
+  font-family:Montserrat;
+  background-color:white;
+  border-radius: 8px 8px 8px 8px;
+  color:#22294d;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.buttonStep:hover {
+    background-color:#5678;
+}
+    
+h1{
+  font-size: 4.8em;
+  text-align: center;
+  font-family:Montserrat;
+  color: white;
+  text-shadow: 3px 3px 10px #FFFFFF;
+}
+
+.Hasil{
+  font-size: 1.5em;
+  font-family:Montserrat;
+  color: white;
+  text-shadow: 2px 2px 5px #FFFFFF;      
+}
+
+a {
+  text-shadow: 3px 3px 10px #FFFFFF;
+  color: White ;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}    
+    
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  font-family: Montserrat;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tab.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.tab-content {
+  display: none;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 0 8px 8px 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-content.active {
+  display: block;
+}        
+</style>
+</head>
+  <h1>Recursive</h1>
+  <body>
+<div class="tab-container">
+  <div class="tab active" onclick="changeTab('simulasi')">Simulasi</div>
+  <div class="tab" onclick="changeTab('materi')">Materi</div>
+  <div class="tab" onclick="changeTab('bigo')">Big O</div>
+  </div>
+  <div class="tab-content active" id="simulasi">
+  <div class="glass">  
+  <div id="sentence" class="Hasil"> </div>
+  </div>
+  <br><br><br>
+  <button onclick="previousStep()" class="buttonStep">Previous</button>
+  <button onclick="nextStep()" class="buttonStep">Next</button>
+</div>
+    
+    
+<div class="tab-content" id="materi">
+<h2>Materi</h2>
+<p>Proses mendefinisikan objek dalam terminologi dirinya sendiri disebut rekursi. <i>(recursion)</i>. Fungsi rekursif didefinisikan oleh dua bagian:
+<li> Basis<br> Bagian yang berisi nilai fungsi yang terdefinisi secara eksplisit. Bagian ini juga sekaligus menghentikan rekursif (dan memberikan sebuah nilai yang terdefinisi pada fungsi rekursif). </li>
+<li>Rekurens<br>Bagian ini mendefinisikan fungsi dalam terminologi dirinya sendiri. Berisi kaidah untuk menemukan nilai fungsi pada suatu input dari nilai-nilai lainnya pada input yang lebih kecil.</li> </p>
+</div>
+
+<div class="tab-content" id="bigo">
+    <h2>Big O</h2>
+    <p>Kompleksitas dari algoritma ini adalah O(n)</p>
+</div>
+ 
+  <script src="Recursive.js"></script>
+    
+  <br>  <br>
+  <a href="halaman2.html">Back</a>
+</body>
+</html>

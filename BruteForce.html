@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BruteForce</title>
+  <style>
+.glass {
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 0 8px 8px 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+    
+.glass p {
+    margin: 0;
+  }    
+    
+  
+.biru {
+  color: #284062;     
+}
+.stay {
+  color: #90cbef;
+}
+    
+.buttonStep {
+    font-family:Montserrat;
+    background-color:white;
+    border-radius: 8px 8px 8px 8px;
+    color:#22294d ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonStep:hover {
+    background-color:#5678;
+}
+    
+body {
+  background: #22294d;
+  font-size: 16px;
+  font-family:Montserrat;
+  margin: 0; 
+  padding: 20px;
+  color: white;
+}
+
+.Teks{
+  font-size: 32px; 
+  font-family:Montserrat;
+  color: white;
+}
+    
+#originalSentence, #modifiedSentence {
+  font-size: 24px;}
+
+
+.Hasil{
+  text-align: center;
+  font-size: 2.8em;
+  font-family:Montserrat;
+  color: white;
+  text-shadow: 2px 2px 5px #FFFFFF; }
+    
+h1 {
+  font-size: 4.8em;
+  font-family:Montserrat;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 10px #FFFFFF;
+}
+    
+    
+a {
+  text-shadow: 3px 3px 10px #FFFFFF;
+  color: White ;
+  text-decoration: none;}
+
+a:hover {
+  text-decoration: underline;}
+    
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  font-family: Montserrat;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tab.active {
+  background-color: rgba(255, 255, 255, 0.4);}
+
+.tab-content {
+  display: none;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 0 8px 8px 8px;
+  background-color: rgba(255, 255, 255, 0.1);}
+
+.tab-content.active {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Brute Force</h1>
+ <div class="tab-container">
+    <div class="tab active" onclick="changeTab('simulasi')">Simulasi</div>
+    <div class="tab" onclick="changeTab('materi')">Materi</div>
+    <div class="tab" onclick="changeTab('bigo')">Big O</div>
+  </div>
+  <div class="tab-content active" id="simulasi">
+    <div class="glass">
+      <p class="Teks" id="originalSentence">Pattern:<br> udin, ache, have, ears</p>
+    </div>
+    <div class="glass">
+      <p class="Teks" id="modifiedSentence">Hasil kalimat:</p>
+    </div>
+    <div id="stepInfo"></div>
+    <div id="currentWord"></div>
+    
+    <p class="Hasil" id="resultingWords">Hasil kata:</p>
+    <button class="buttonStep" onclick="previousStep()">Previous</button>
+    <button class="buttonStep" onclick="nextStep()">Next</button>
+  </div>
+  <div class="tab-content" id="materi">
+    <h2>Materi</h2>
+    <p>Algoritma Brute Force adalah pendekatan yang lempang <i>straightforward</i> untuk memecahkan suatu persoalan, biasanya didasarkan pada pernyataan masalah <i>problem statement</i> dan definisi konsep yang dilibatkan. Algoritma brute force memecahkan masalah dengan sangat sederhana, langsung dan dengan cara yang jelas.
+Algoritma Brute Force dapat memecahkan persoalan pencocokan string. Berikut merupakan langkah-langkah yang terjadi.
+<ol>
+  <li>Mula-mula pattern P dicocokkan pada awal teks T.</li>
+  <li>Dengan bergerak dari kiri ke kanan, bandingkan setiap setiap karakter di dalam pattern P dengan karakter yang bersesuaian di dalam teks T sampai:
+    <ul>
+      <li>semua karakter yang dibandingkan cocok atau sama (pencarian berhasil)</li>
+      <li>dijumpai sebuah ketidakcocokan karakter (pencarian belum berhasil)</li>
+    </ul>
+  </li>
+  <li>Bila pattern P belum ditemukan kecocokannya dan teks T belum habis, geser pattern P satu karakter ke kanan dan ulangi langkah 2</li>
+</ol>
+
+</p>
+  
+  </div>
+  <div class="tab-content" id="bigo">
+    <h2>Big O</h2>
+    <p>Kompleksitas dari algoritma ini <i>Worst Case</i> adalah  Pada setiap pergeseran pattern, semua karakter di pattern dibandingkan. Jumlah perbandingan: m(n – m + 1) = O(mn).<br> Kompleksitas kasus terbaik adalah O(n).<br> Kasus rata-rata adalah O(m+n)</p>
+  </div>
+ 
+<script src="BruteForce.js"></script>
+
+<br><br><a href="halaman2.html">Back</a>
+</body>
+</html>

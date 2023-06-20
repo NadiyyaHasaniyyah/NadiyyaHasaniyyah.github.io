@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+   /* background: linear-gradient(black, #38073b);*/
+   background:  #22294d;
+    font-family: Montserrat;
+}
+
+.paralax{
+    position: relative;
+    width: 100%;
+    height: 180vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    y-index: -100;
+}
+
+.paralax::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#FFFFFF,transparent );
+    z-index: 1000
+}
+.paralax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.paralax img#moon{
+    z-index: -1000;
+    mix-blend-mode: screen; 
+    width: 100%;
+    height: 100%;
+}
+
+.paralax img#stars{
+   transform: translateX(-180px);
+  mix-blend-mode: screen; 
+}
+
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 3px 3px 10px #FFFFFF;
+    bottom: -100px;
+    z-index: 180;
+}
+
+#Nadiyya{
+    transform: translateY(-70px);
+    position: absolute;
+    font-size: 1em;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 3px 3px 10px #FFFFFF;
+}
+.paralax img#awan{
+    z-index: 100;
+}
+
+#button{
+    position: absolute;
+    z-index: 9999;
+    font-size: 1em;
+    color: black;
+    background-color: white;
+    padding: 10px 50px;
+    border-radius: 20px;
+    text-decoration: none;
+    transform: translateY(100px);
+    bottom: -100px;
+
+}
+
+a:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover{
+    opacity:0.9;
+}
+
+
+.description {
+    position: relative;
+    padding:10em;
+    background-color: white;
+}
+.description p {
+    fon-size: 1.1em;
+     text-align: justify;
+}
