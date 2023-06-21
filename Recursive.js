@@ -1,4 +1,4 @@
-var sentence = 'hudinahavertearsakacheudinarunadudinacheadearsibaudinachewahavehtanearsahache';
+var sentence = 'hudinahavertearsakacheudinaruudinnadudinacheadearsibaudinachewahavehtaachenearsaacheh';
 var replacements = ["udin", "have", "ache", "ears"];
 var currentStep = 0;
 var steps = [];
